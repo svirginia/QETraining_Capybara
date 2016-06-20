@@ -20,10 +20,10 @@ When Fill fields
 |State     |IOWA	     |
 When Click on reset button
 Then Verify all fields are empty
-|field     |value       |
-|First Name|            |
-|Last Name |            |
-|Address1  |            |
-|Address2  |            |
-|City      |            |
-|State     |            |
+|field     |value         |
+|First Name|              |
+|Last Name |              |
+|Address1  |              |
+|Address2  |              |
+|City      |              |
+|State     | Select State |
