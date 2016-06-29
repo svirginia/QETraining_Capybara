@@ -30,5 +30,5 @@ When(/^Clik on "([^"]*)" tab$/) do |tabName|
 end
 
 Then(/^I should see the "([^"]*)" content title$/) do |contentTitle|
-  expect(page.find('div[class ^= "tabcontent"][style *= "block"] b').text).to eq(contentTitle)
+  expect(page.find('div[class ^= "tabcontent"]:not([style *= "none"]) b').text).to eq(contentTitle)
 end

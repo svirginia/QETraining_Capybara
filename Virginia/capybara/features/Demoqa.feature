@@ -1,6 +1,6 @@
 Feature: Demoqa elements 
 
-@tag1
+@Demoqa1
 Scenario: UI validations
 Given I open the demoqa page
 Then I should see the navigation tabs
@@ -18,7 +18,7 @@ Then I should see the "Registration" module title with its options
 	|Resizable |
 	|Selectable|
 	|Sortable  |
-  And I should see the "Widget" module title with its options
+  And I should see the "Widgettt" module title with its options
 	|Accordion    |
 	|Autocomplete |
 	|Datepicker   |
@@ -29,7 +29,7 @@ Then I should see the "Registration" module title with its options
   And I should see the "Frames and Windows" module title with its options
 	|Frames and windows |
 
-@tag2
+@Demoqa2
 Scenario: Navigation tabs 
 Given I open the demoqa page
 Then I should see the tabs
