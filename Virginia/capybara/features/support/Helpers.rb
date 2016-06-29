@@ -1,4 +1,4 @@
-include Capybara::DSL
+#include Capybara::DSL
 
 module Helpers
 	def Helpers.fill_field(label, value)
@@ -23,5 +23,16 @@ module Helpers
 	  		puts "Getting textbox value: #{label} ,value #{displayed_value}"
 		end 
 		return displayed_value 
+	end
+
+	def Helpers.fill_Passenger_Fields(label, text)
+		label_found = page.find('label',:text => /^#{label}$/) # Regex to compare that text will be exactly equal 
+		if label == "Reading" || label == "Cricket" || label == "Dance"
+			fieldinput = label_found.find(:xpath, './following-sibling::input[1]')
+			checked = text == "checked" ? true : false
+			fieldinput.set(checked)
+		else			
+  			label_found.find(:xpath, './/following-sibling::input[1]').set text
+  		end
 	end
 end

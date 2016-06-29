@@ -4,6 +4,7 @@ require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'yaml'#para reconocer yml files
 require 'pathname'
+include Capybara::DSL
 
 ##definir los methods q nospermitira reconocer archivos de configuaracion
 def find_config_file(filename)
