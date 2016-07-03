@@ -4,8 +4,6 @@ Given(/^I open automation page$/) do
 end
 
 When(/^I click on (.*?) main menu options$/) do |menu|
-	p "menu:#{menu}"
-	p page.find('#block_top_menu').text
 	page.find('#block_top_menu').find('li',:text => menu).click  #TODO ask to Karime
 
 	# p page.all(:xpath,'//div[@id = "block_top_menu"]//ul[contains(@class, "sf-menu")]/li/a')[0].text
@@ -20,7 +18,6 @@ When(/^I click on (.*?) main menu options$/) do |menu|
 end
 
 Then(/^I should see Navigation menu with option (.*?)$/) do |option|
-	p page.find('.breadcrumb').text
   expect(page.find('.breadcrumb').text).to include option
 end
 
